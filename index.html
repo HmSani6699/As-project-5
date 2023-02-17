@@ -20,7 +20,7 @@
     <!-- header start -->
     <header class="bg-blue-50">
         <nav
-            class="flex justify-between items-center max-w-screen-2xl mx-auto p-2">
+            class="flex justify-between items-center max-w-screen-2xl mx-auto p-4">
             <div>
                 <h2 class="text-4xl font-bold ">
                     Interactive
@@ -35,7 +35,7 @@
 
     <main>
         <section
-            class="lg:flex max-w-screen-2xl mx-auto mt-12 mb-12 ">
+            class="lg:flex max-w-screen-2xl mx-auto mt-12 mb-12 p-4">
             <div
                 class="grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:mr-4">
                 <!-- Triangle -->
@@ -56,12 +56,14 @@
                         <div
                             class="flex mx-8 mb-8 mt-3">
                             <p><input type="text"
+                                    id="triangle-first-input"
                                     placeholder="b"
                                     class="bg-slate-200 w-2/3 p-2 rounded-md" />
                                 <span
                                     class="ml-2">cm</span>
                             </p>
                             <p><input type="text"
+                                    id="triangle-second-input"
                                     placeholder="h"
                                     class="bg-slate-200 w-2/3 p-2 rounded-md" /><span
                                     class="ml-2">cm</span>
@@ -70,6 +72,7 @@
                         <div
                             class="card-actions justify-end">
                             <button
+                                id="triangle-btn"
                                 class="btn btn-info w-full text-white font-medium">Calculate</button>
                         </div>
                     </div>
@@ -112,11 +115,11 @@
                 </div>
                 <!-- Parallelogram -->
                 <div
-                    class="card full bg-base-100 border-2">
+                    class="card w-full bg-base-100 border-2">
                     <figure><img
                             src="images/parallelogram.png"
                             alt="Shoes"
-                            class="pt-6" />
+                            class="pt-6 pl-2 pr-2" />
                     </figure>
                     <div
                         class="card-body text-center">
@@ -257,44 +260,52 @@
                     </div>
                 </div>
             </div>
-            <!-- Rectangle -->
+            <!-- calculate section -->
             <div>
                 <div
-                    class="w-96 bg-base-100 border-2 rounded-lg  p-3">
+                    class="card w-full bg-base-100 border-2 lg:mt-0 mt-8">
                     <h1
-                        class="text-center font-bold text-2xl underline decoration-solid ">
+                        class="text-center font-bold text-2xl underline decoration-solid mt-5">
                         Area
                         Calculation</h1>
-                    <div class="overflow-x-auto">
-                        <table class="table mt-6">
-                            <!-- head -->
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Area</th>
-                                    <th>Button
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row 1 -->
-                                <tr>
-                                    <td>1.Name
-                                    </td>
-                                    <td>Cy
-                                        Ganderton
-                                    </td>
-                                    <td><button
-                                            class="btn btn-accent">Button</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div
+                        class="card-body text-center">
+                        <div
+                            class="overflow-x-auto">
+                            <table
+                                class="table w-full mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Name
+                                        </th>
+                                        <th>Area
+                                        </th>
+                                        <th>Button
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.Name
+                                        </td>
+                                        <td>Cy
+                                            Ganderton
+                                        </td>
+                                        <td><button
+                                                class="btn btn-accent">Button</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- js link -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
