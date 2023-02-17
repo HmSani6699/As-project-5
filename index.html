@@ -20,7 +20,7 @@
     <!-- header start -->
     <header class="bg-blue-50">
         <nav
-            class="flex justify-between items-center max-w-7xl mx-auto p-2">
+            class="flex justify-between items-center max-w-screen-2xl mx-auto p-2">
             <div>
                 <h2 class="text-4xl font-bold ">
                     Interactive
@@ -28,29 +28,30 @@
                 <span>Geometry Genius</span>
             </div>
             <button
-                class="btn btn-info">Blog</button>
+                class="btn btn-info text-white">Blog</button>
         </nav>
     </header>
     <!-- header end -->
 
     <main>
         <section
-            class="lg:flex mx-11 mt-12 mb-12">
+            class="lg:flex max-w-screen-2xl mx-auto mt-12 mb-12 ">
             <div
-                class="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+                class="grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:mr-4">
                 <!-- Triangle -->
                 <div
-                    class="card w-full bg-base-100 shadow-xl">
+                    class="card w-full bg-base-100  border-2">
                     <figure><img
                             src="images/triangle.png"
-                            alt="Shoes" />
+                            alt="Shoes"
+                            class="pt-6" />
                     </figure>
                     <div
                         class="card-body text-center">
                         <h2
                             class="text-center text-2xl font-semibold">
                             Triangle</h2>
-                        <p>Area (A) = 0.5 * b * h
+                        <p>Area (A) = 0.5 x b x h
                         </p>
                         <div
                             class="flex mx-8 mb-8 mt-3">
@@ -75,17 +76,18 @@
                 </div>
                 <!-- Rectangle -->
                 <div
-                    class="card w-full bg-base-100 shadow-xl">
+                    class="card w-full bg-base-100 border-2">
                     <figure><img
                             src="images/rectangle.png"
-                            alt="Shoes" />
+                            alt="Shoes"
+                            class="pt-6" />
                     </figure>
                     <div
                         class="card-body text-center">
                         <h2
                             class="text-center text-2xl font-semibold">
                             Rectangle</h2>
-                        <p>Area (A) = w * l
+                        <p>Area (A) = w x l
                         </p>
                         <div
                             class="flex mx-8 mb-8 mt-3">
@@ -110,17 +112,18 @@
                 </div>
                 <!-- Parallelogram -->
                 <div
-                    class="card w-96 bg-base-100 shadow-xl">
+                    class="card full bg-base-100 border-2">
                     <figure><img
                             src="images/parallelogram.png"
-                            alt="Shoes" />
+                            alt="Shoes"
+                            class="pt-6" />
                     </figure>
                     <div
                         class="card-body text-center">
                         <h2
                             class="text-center text-2xl font-semibold">
                             Parallelogram</h2>
-                        <p>Area (A) = b * h
+                        <p>Area (A) = b x h
                         </p>
                         <div
                             class="flex mx-8 mb-8 mt-3">
@@ -145,7 +148,7 @@
                 </div>
                 <!-- Rhombus -->
                 <div
-                    class="card w-96 bg-base-100 shadow-xl">
+                    class="card full bg-base-100 border-2">
                     <figure><img
                             src="images/rhombus.png"
                             alt="Shoes"
@@ -156,8 +159,8 @@
                         <h2
                             class="text-center text-2xl font-semibold">
                             Rhombus</h2>
-                        <p>Area (A) = 0.5 *
-                            d<sub>1</sub> *
+                        <p>Area (A) = 0.5 x
+                            d<sub>1</sub> x
                             d<sup>2</sup>
                         </p>
                         <div
@@ -183,7 +186,7 @@
                 </div>
                 <!-- Pentagon -->
                 <div
-                    class="card w-96 bg-base-100 shadow-xl">
+                    class="card full bg-base-100 border-2">
                     <figure><img
                             src="images/pentagon.png"
                             alt="Shoes"
@@ -194,7 +197,7 @@
                         <h2
                             class="text-center text-2xl font-semibold">
                             Pentagon</h2>
-                        <p>Area (A) = 0.5 * p * b
+                        <p>Area (A) = 0.5 x p x b
                         </p>
                         <div
                             class="flex mx-8 mb-8 mt-3">
@@ -217,43 +220,76 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-            <!-- Rectangle -->
-            <div>
+                <!-- Ellipse -->
                 <div
-                    class="card w-96 bg-base-100 shadow-xl">
+                    class="card w-full bg-base-100 border-2">
                     <figure><img
-                            src="images/triangle.png"
-                            alt="Shoes" />
+                            src="images/ellipse.png"
+                            alt="Shoes"
+                            class="pt-6" />
                     </figure>
                     <div
                         class="card-body text-center">
                         <h2
                             class="text-center text-2xl font-semibold">
                             Rectangle</h2>
-                        <p>Area (A) = 0.5 * b * h
+                        <p>Area (A) = ab
                         </p>
                         <div
                             class="flex mx-8 mb-8 mt-3">
                             <p><input type="text"
-                                    placeholder="b"
-                                    class="bg-slate-200 w-2/3 p-2" />
+                                    placeholder="a"
+                                    class="bg-slate-200 w-2/3 p-2 rounded-md" />
                                 <span
                                     class="ml-2">cm</span>
                             </p>
                             <p><input type="text"
-                                    placeholder="h"
-                                    class="bg-slate-200 w-2/3 p-2" /><span
+                                    placeholder="b"
+                                    class="bg-slate-200 w-2/3 p-2 rounded-md" /><span
                                     class="ml-2">cm</span>
                             </p>
                         </div>
                         <div
                             class="card-actions justify-end">
                             <button
-                                class="btn btn-info w-full">Info</button>
+                                class="btn btn-info w-full text-white font-medium">Calculate</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Rectangle -->
+            <div>
+                <div
+                    class="w-96 bg-base-100 border-2 rounded-lg  p-3">
+                    <h1
+                        class="text-center font-bold text-2xl underline decoration-solid ">
+                        Area
+                        Calculation</h1>
+                    <div class="overflow-x-auto">
+                        <table class="table mt-6">
+                            <!-- head -->
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Area</th>
+                                    <th>Button
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td>1.Name
+                                    </td>
+                                    <td>Cy
+                                        Ganderton
+                                    </td>
+                                    <td><button
+                                            class="btn btn-accent">Button</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
