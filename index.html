@@ -87,7 +87,7 @@
                     </figure>
                     <div
                         class="card-body text-center">
-                        <h2
+                        <h2 id="rectangle-title"
                             class="text-center text-2xl font-semibold">
                             Rectangle</h2>
                         <p>Area (A) = w x l
@@ -95,12 +95,14 @@
                         <div
                             class="flex mx-8 mb-8 mt-3">
                             <p><input type="text"
+                                    id="rectangle-first-input"
                                     placeholder="w"
                                     class="bg-slate-200 w-2/3 p-2 rounded-md" />
                                 <span
                                     class="ml-2">cm</span>
                             </p>
                             <p><input type="text"
+                                    id="rectangle-second-input"
                                     placeholder="l"
                                     class="bg-slate-200 w-2/3 p-2 rounded-md" /><span
                                     class="ml-2">cm</span>
@@ -109,6 +111,7 @@
                         <div
                             class="card-actions justify-end">
                             <button
+                                id="rectangle-btn"
                                 class="btn btn-info w-full text-white font-medium">Calculate</button>
                         </div>
                     </div>

@@ -25,16 +25,30 @@ function displayData(name, area) {
     tableContainer.appendChild(tr);
 }
 
-
+// Triangle part
 document.getElementById('triangle-btn').addEventListener('click', function () {
     //card title
     const triangleTitle = getCardTitle('triangle-title');
-    //first input value
+    // Triangle first input value
     const firstInputValue = getInputValue('triangle-first-input');
-    //second input value
+    // Triangle second input value
     const secondInputValue = getInputValue('triangle-second-input')
     // convert the triangle area
     let area = 0.5 * firstInputValue * secondInputValue;
     //show the display data
     displayData(triangleTitle, area)
+});
+
+// Rectangle part
+document.getElementById('rectangle-btn').addEventListener('click', function () {
+    //card title
+    const rectangleTitle = getCardTitle('rectangle-title')
+    //Rectangle first input value
+    const firstInputValue = getInputValue('rectangle-first-input');
+    //Rectangle second input value
+    const secondInputValue = getInputValue('rectangle-second-input');
+    // convert the rectangle  area
+    const area = firstInputValue * secondInputValue;
+    //show the display data
+    displayData(rectangleTitle, area)
 })
