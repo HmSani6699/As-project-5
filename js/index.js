@@ -51,4 +51,19 @@ document.getElementById('rectangle-btn').addEventListener('click', function () {
     const area = firstInputValue * secondInputValue;
     //show the display data
     displayData(rectangleTitle, area)
+});
+
+// Parallelogram part
+document.getElementById('parallelogram-btn').addEventListener('click', function () {
+    //card title
+    const parallelogramTitle = getCardTitle('parallelogram-title')
+    //Parallelogram first input value
+    const firstInputValue = getInputValue('parallelogram-first-input');
+    //Parallelogram second input value
+    const secondInputValue = getInputValue('parallelogram-second-input');
+    // convert the Parallelogram  area
+    const area = firstInputValue * secondInputValue;
+    //show the display data
+    displayData(parallelogramTitle, area)
 })
+
