@@ -67,3 +67,16 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
     displayData(parallelogramTitle, area)
 })
 
+// Rhombus part
+document.getElementById('rhombus-btn').addEventListener('click', function () {
+    //card title
+    const rhombusTitle = getCardTitle('rhombus-title')
+    //Rhombus first input value
+    const firstInputValue = getInputValue('rhombus-first-input');
+    //Rhombus second input value
+    const secondInputValue = getInputValue('rhombus-second-input');
+    // convert the Rhombus  area
+    const area = 0.5 * firstInputValue * secondInputValue;
+    //show the display data
+    displayData(rhombusTitle, area)
+})
