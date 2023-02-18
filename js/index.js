@@ -81,4 +81,3 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
     displayData(array[0], area)
 });
 
-
