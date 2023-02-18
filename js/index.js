@@ -8,6 +8,7 @@ function getInputValue(inputId) {
     const firstInput = document.getElementById(inputId);
     const firstInputValueString = firstInput.value;
     const firstInputValue = parseFloat(firstInputValueString);
+    firstInput.value = '';
     return firstInputValue
 }
 
@@ -32,7 +33,14 @@ document.getElementById('triangle-btn').addEventListener('click', function () {
     // Triangle first input value
     const firstInputValue = getInputValue('triangle-first-input');
     // Triangle second input value
-    const secondInputValue = getInputValue('triangle-second-input')
+    const secondInputValue = getInputValue('triangle-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the triangle area
     let area = 0.5 * firstInputValue * secondInputValue;
     //show the display data
@@ -47,6 +55,13 @@ document.getElementById('rectangle-btn').addEventListener('click', function () {
     const firstInputValue = getInputValue('rectangle-first-input');
     //Rectangle second input value
     const secondInputValue = getInputValue('rectangle-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the rectangle  area
     const area = firstInputValue * secondInputValue;
     //show the display data
@@ -61,6 +76,13 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
     const firstInputValue = getInputValue('parallelogram-first-input');
     //Parallelogram second input value
     const secondInputValue = getInputValue('parallelogram-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the Parallelogram  area
     const area = firstInputValue * secondInputValue;
     //show the display data
@@ -75,6 +97,13 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
     const firstInputValue = getInputValue('rhombus-first-input');
     //Rhombus second input value
     const secondInputValue = getInputValue('rhombus-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the Rhombus  area
     const area = 0.5 * firstInputValue * secondInputValue;
     //show the display data
@@ -89,6 +118,13 @@ document.getElementById('pentagon-btn').addEventListener('click', function () {
     const firstInputValue = getInputValue('pentagon-first-input');
     //Pentagon second input value
     const secondInputValue = getInputValue('pentagon-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the Pentagon  area
     const area = 0.5 * firstInputValue * secondInputValue;
     //show the display data
@@ -103,9 +139,41 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
     const firstInputValue = getInputValue('ellipse-first-input');
     //Ellipse second input value
     const secondInputValue = getInputValue('ellipse-second-input');
+
+    if (isNaN(firstInputValue) || isNaN(secondInputValue)) {
+        return alert('please enter your number')
+    }
+    else if (firstInputValue < 0 || secondInputValue < 0) {
+        return alert('please enter your positive number')
+    }
     // convert the Ellipse  area
     const calculate = 3.14 * firstInputValue * secondInputValue;
     const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(ellipseTitle, area)
-})
+});
+
+
+//set the random background color for card
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+        color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+}
+
+let cards = document.querySelectorAll('.card-box');
+
+for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i]);
+
+    cards[i].addEventListener("mouseover", function () {
+        cards[i].style.backgroundColor = randomColor();
+
+    });
+    cards[i].addEventListener("mouseout", function () {
+        cards[i].style.backgroundColor = 'white';
+    });
+}
+
