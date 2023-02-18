@@ -42,7 +42,8 @@ document.getElementById('triangle-btn').addEventListener('click', function () {
         return alert('please enter your positive number')
     }
     // convert the triangle area
-    let area = 0.5 * firstInputValue * secondInputValue;
+    const calculate = 0.5 * firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(triangleTitle, area)
 });
@@ -63,7 +64,8 @@ document.getElementById('rectangle-btn').addEventListener('click', function () {
         return alert('please enter your positive number')
     }
     // convert the rectangle  area
-    const area = firstInputValue * secondInputValue;
+    const calculate = firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(rectangleTitle, area)
 });
@@ -84,7 +86,8 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
         return alert('please enter your positive number')
     }
     // convert the Parallelogram  area
-    const area = firstInputValue * secondInputValue;
+    const calculate = firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(parallelogramTitle, area)
 })
@@ -105,7 +108,8 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
         return alert('please enter your positive number')
     }
     // convert the Rhombus  area
-    const area = 0.5 * firstInputValue * secondInputValue;
+    const calculate = 0.5 * firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(rhombusTitle, area)
 });
@@ -126,7 +130,8 @@ document.getElementById('pentagon-btn').addEventListener('click', function () {
         return alert('please enter your positive number')
     }
     // convert the Pentagon  area
-    const area = 0.5 * firstInputValue * secondInputValue;
+    const calculate = 0.5 * firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
     //show the display data
     displayData(pentagonTitle, area)
 });
@@ -171,9 +176,6 @@ for (let i = 0; i < cards.length; i++) {
     cards[i].addEventListener("mouseover", function () {
         cards[i].style.backgroundColor = randomColor();
 
-    });
-    cards[i].addEventListener("mouseout", function () {
-        cards[i].style.backgroundColor = 'white';
     });
 }
 
