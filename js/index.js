@@ -79,4 +79,33 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
     const area = 0.5 * firstInputValue * secondInputValue;
     //show the display data
     displayData(rhombusTitle, area)
+});
+
+// Pentagon part
+document.getElementById('pentagon-btn').addEventListener('click', function () {
+    //card title
+    const pentagonTitle = getCardTitle('pentagon-title')
+    //Pentagon first input value
+    const firstInputValue = getInputValue('pentagon-first-input');
+    //Pentagon second input value
+    const secondInputValue = getInputValue('pentagon-second-input');
+    // convert the Pentagon  area
+    const area = 0.5 * firstInputValue * secondInputValue;
+    //show the display data
+    displayData(pentagonTitle, area)
+});
+
+// Ellipse part
+document.getElementById('ellipse-btn').addEventListener('click', function () {
+    //card title
+    const ellipseTitle = getCardTitle('pentagon-title')
+    //Ellipse first input value
+    const firstInputValue = getInputValue('ellipse-first-input');
+    //Ellipse second input value
+    const secondInputValue = getInputValue('ellipse-second-input');
+    // convert the Ellipse  area
+    const calculate = 3.14 * firstInputValue * secondInputValue;
+    const area = parseFloat(calculate).toFixed(2)
+    //show the display data
+    displayData(ellipseTitle, area)
 })
