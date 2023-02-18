@@ -1,3 +1,7 @@
+//click the  button to new page
+document.getElementById('blog-btn').addEventListener('click', function () {
+    location.href = 'blog.html'
+});
 
 // Triangle part
 document.getElementById('triangle-btn').addEventListener('click', function () {
@@ -7,9 +11,9 @@ document.getElementById('triangle-btn').addEventListener('click', function () {
 
     // convert the triangle area
     const calculate = 0.5 * array[1] * array[2];
-
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
-    displayData(array[0], calculate);
+    displayData(array[0], area);
 });
 
 // Rectangle part
@@ -19,7 +23,8 @@ document.getElementById('rectangle-btn').addEventListener('click', function () {
     const array = getArray('rectangle-title', 'rectangle-first-input', 'rectangle-second-input');
 
     // convert the rectangle  area
-    const area = array[1] * array[2];
+    const calculate = array[1] * array[2];
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
     displayData(array[0], area)
 });
@@ -31,7 +36,8 @@ document.getElementById('parallelogram-btn').addEventListener('click', function 
     const array = getArray('parallelogram-title', 'parallelogram-first-input', 'parallelogram-second-input');
 
     // convert the Parallelogram  area
-    const area = array[1] * array[2];
+    const calculate = array[1] * array[2];
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
     displayData(array[0], area)
 })
@@ -43,7 +49,8 @@ document.getElementById('rhombus-btn').addEventListener('click', function () {
     const array = getArray('rhombus-title', 'rhombus-first-input', 'rhombus-second-input');
 
     // convert the Rhombus  area
-    const area = 0.5 * array[1] * array[2];
+    const calculate = 0.5 * array[1] * array[2];
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
     displayData(array[0], area)
 });
@@ -55,7 +62,8 @@ document.getElementById('pentagon-btn').addEventListener('click', function () {
     const array = getArray('pentagon-title', 'pentagon-first-input', 'pentagon-second-input');
 
     // convert the Pentagon  area
-    const area = 0.5 * array[1] * array[2];
+    const calculate = 0.5 * array[1] * array[2];
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
     displayData(array[0], area)
 });
@@ -68,7 +76,7 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
 
     // convert the Ellipse  area
     const calculate = 3.14 * array[1] * array[2];
-    const area = parseFloat(calculate).toFixed(2)
+    const area = parseFloat(calculate).toFixed(2);
     //show the display data
     displayData(array[0], area)
 });
